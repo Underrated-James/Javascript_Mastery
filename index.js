@@ -728,3 +728,33 @@ console.log(sum(1,2,3,4,5))
 // function long(element){
 //     return element.length > 5;
 // }
+
+
+
+
+const prices = [5,30,10,25,15,20]
+
+const total = prices.reduce(sum);
+
+console.log(`$ ${total.toFixed(2)}`)
+
+function sum(previous, next){
+  return previous + next
+}
+
+
+const grade = [75,50,90,80,65,95]
+
+const max1 = grade.reduce(getMax)
+const min1 = grade.reduce(getMin)
+
+console.log(max1)
+console.log(min1)
+
+function getMax(previous, next){
+  return Math.max(previous, next);
+}
+
+function getMin(previous, next){
+  return Math.min(previous, next);
+}
