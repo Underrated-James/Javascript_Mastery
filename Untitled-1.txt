@@ -1,0 +1,253 @@
+console.log("Hello World")
+
+const data = {
+  "meta": {
+    "requestId": "req_9f8a7b6c",
+    "generatedAt": "2026-05-16T12:45:00Z",
+    "environment": {
+      "region": "ap-southeast-1",
+      "server": {
+        "id": "srv-991",
+        "uptime": 982374,
+        "containers": [
+          {
+            "name": "gateway",
+            "status": "healthy",
+            "ports": [80, 443],
+            "metrics": {
+              "cpu": {
+                "cores": [
+                  { "id": 0, "usage": 67.4 },
+                  { "id": 1, "usage": 72.1 }
+                ]
+              }
+            }
+          },
+          {
+            "name": "worker",
+            "status": "degraded",
+            "queues": [
+              {
+                "name": "emails",
+                "jobs": [
+                  {
+                    "id": "job_1",
+                    "attempts": [
+                      {
+                        "try": 1,
+                        "error": {
+                          "code": "SMTP_TIMEOUT",
+                          "trace": [
+                            {
+                              "file": "mailer.js",
+                              "line": 88,
+                              "locals": {
+                                "recipient": {
+                                  "name": "Alice",
+                                  "contacts": [
+                                    {
+                                      "type": "email",
+                                      "value": "alice@example.com"
+                                    },
+                                    {
+                                      "type": "slack",
+                                      "workspace": {
+                                        "id": "ws_77",
+                                        "channels": [
+                                          {
+                                            "id": "ch_1",
+                                            "messages": [
+                                              {
+                                                "id": "m_900",
+                                                "reactions": [
+                                                  {
+                                                    "emoji": "🔥",
+                                                    "users": [
+                                                      {
+                                                        "id": "u1",
+                                                        "profile": {
+                                                          "username": "neo",
+                                                          "devices": [
+                                                            {
+                                                              "type": "mobile",
+                                                              "sessions": [
+                                                                {
+                                                                  "sessionId": "sess_991",
+                                                                  "geo": {
+                                                                    "country": "Japan",
+                                                                    "coordinates": {
+                                                                      "lat": 35.6764,
+                                                                      "lng": 139.6500
+                                                                    }
+                                                                  },
+                                                                  "security": {
+                                                                    "2fa": true,
+                                                                    "backupCodes": [
+                                                                      "A1B2C3",
+                                                                      "D4E5F6"
+                                                                    ]
+                                                                  }
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "organization": {
+    "name": "CyberDyne Systems",
+    "departments": [
+      {
+        "name": "Engineering",
+        "teams": [
+          {
+            "name": "Platform",
+            "members": [
+              {
+                "id": 101,
+                "name": "John Doe",
+                "skills": [
+                  {
+                    "category": "backend",
+                    "languages": [
+                      {
+                        "name": "Node.js",
+                        "projects": [
+                          {
+                            "title": "Auth Service",
+                            "repositories": [
+                              {
+                                "name": "auth-service",
+                                "branches": [
+                                  {
+                                    "name": "main",
+                                    "commits": [
+                                      {
+                                        "hash": "a1b2c3",
+                                        "changes": [
+                                          {
+                                            "file": "config.json",
+                                            "diff": {
+                                              "before": {
+                                                "featureFlags": {
+                                                  "betaAccess": false
+                                                }
+                                              },
+                                              "after": {
+                                                "featureFlags": {
+                                                  "betaAccess": true,
+                                                  "nested": {
+                                                    "deep": {
+                                                      "deeper": {
+                                                        "deepest": {
+                                                          "secretKey": "SUPER_SECRET_VALUE"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "analytics": {
+    "users": [
+      {
+        "id": "u900",
+        "activity": {
+          "sessions": [
+            {
+              "date": "2026-05-15",
+              "events": [
+                {
+                  "type": "purchase",
+                  "cart": {
+                    "items": [
+                      {
+                        "sku": "SKU-991",
+                        "pricing": {
+                          "base": 99.99,
+                          "discounts": [
+                            {
+                              "code": "SUMMER",
+                              "rules": {
+                                "conditions": [
+                                  {
+                                    "if": {
+                                      "user": {
+                                        "subscription": {
+                                          "tier": "gold",
+                                          "benefits": [
+                                            {
+                                              "name": "priority-support",
+                                              "limits": {
+                                                "daily": 100,
+                                                "remaining": 77
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,730 @@
+
+
+const data = {
+    name: "Dexter",
+    age: 20,
+    city: "New York"
+}
+const response = {
+  statusCode: 200,
+  message: "Users retrieved successfully",
+  success: true,
+  data: {
+    users: [
+      {
+        id: 1,
+        username: "dexter",
+        email: "dexter@gmail.com",
+        city: "Laguna"
+      },
+      {
+        id: 2,
+        username: "john",
+        email: "john@gmail.com",
+        city: "Manila"
+      },
+      {
+        id: 3,
+        username: "maria",
+        email: "maria@gmail.com",
+        city: "Cebu"
+      }
+    ]
+  }
+}
+const users = response.data.users;
+
+const manilaUsers = users.filter(user => user.city === "Manila")
+
+manilaUsers.forEach(user => {
+  console.log(user.id)
+  console.log(user.username)
+  console.log(user.email)
+  console.log(user.city)
+})
+
+const map = users.map(user => user.username)
+
+console.log(map)
+
+
+// let x = 5;
+
+// function function1(){
+//   let x = 2;
+//   console.log(x)
+// }
+
+// function function2(){
+//   let y = 5;
+//   console.log(x + y)
+// }
+
+// function2(x)
+// const textBoxs = document.getElementById("textBox");
+// const toFahrenheit = document.getElementById("fahrenheit");
+// const toCelsius = document.getElementById("celciuis");
+// const result = document.getElementById("result");
+
+
+
+// function convert(event) {
+//     event.preventDefault();
+
+//     let temp = Number(textBoxs.value);
+    
+//     if (toFahrenheit.checked) {
+//         let answer = (temp * 1.8) + 32;
+//         result.textContent = answer;    
+//     } 
+//     else if (toCelsius.checked) {
+//         let sagot = (temp - 32) / 2
+//         result.textContent = sagot
+//     } 
+//     else {
+//         result.textContent = "Please select an option";
+//     }
+// }
+
+
+// let numbers = [1,2,3,4,5]
+
+// let max = Math.max(...numbers)
+// let min = Math.min(...numbers)
+// console.log(`max: ${max} | min: ${min}`)
+
+// let fruits = ["apple", "orange", "banana"]
+// let veg = ['celery', 'magustine', 'carrots']
+
+// let temp = [...veg, ...fruits, 1]
+// console.log(temp)
+
+
+// const food1 = 'pizza';
+// const food2 = 'hotdog';
+// const food3 = 'apple';
+// const food4 = 'meat';
+
+// function fridge(...foods){
+//     console.log(foods)
+// }
+
+// function sum(...numbers){
+//     let result = 0;
+
+//     for(let number of numbers){
+//         result += number 
+//     }
+//     return result
+// }
+
+// console.log(sum(1,2,3,4,5))
+
+
+
+// let numbers = [10,89,23,54,34,2,4,22,105]
+
+// let min = Math.min(...numbers)
+// let max = Math.max(...numbers)
+// console.log(min)
+// console.log(max)
+
+// const drinks = ['water', 'juice'];
+// const snacks = ['chips', 'cookies'];
+
+// let temp = [...drinks, ...snacks];
+
+// const colors = ['red', 'blue', 'green'];
+
+// let newColors = [...colors, 'yellow']
+
+// console.log(newColors)
+// console.log(temp)
+
+// function showNames(...names){
+//     console.log(names)
+// }
+
+// showNames("James", "John", "Dexter");
+
+
+// function average(...numbers){
+//     let temp = 0;
+
+//     for(let number of numbers){
+//         temp += number
+//     }
+//    let average = temp / numbers.length
+//    console.log(average)
+// }
+
+// average(10,20,30)
+
+
+
+
+
+// function generateRandomPass (length, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols){
+
+//     const lowerCase = "abcdefghijklmnopqrstuvwxyz"
+//     const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+//     const numbers = "1234567890"
+//     const symbols = "!@#$%^&()"
+
+
+//     let allowedChars = "";
+//     let password = "";
+
+//     allowedChars += includeLowerCase ? lowerCase : ""
+//     allowedChars += includeUpperCase ? upperCase : ""
+//     allowedChars += includeNumbers ? numbers : ""
+//     allowedChars += includeSymbols ? symbols : ""
+
+//     if(length <= 0){
+//         console.log(`Password Length must be greate than 0`)
+//     }
+
+//     if(allowedChars.length === 0 ){
+//         console.log(`password must have atleast 1 Character`)
+//     }
+
+//     for(let i = 0; i < length; i++){
+//         const randomIndex = Math.floor(Math.random() * allowedChars.length)
+//         password += allowedChars[randomIndex]
+//     }
+
+//     return password;
+// }
+
+
+// const passwordLength = 12;
+// const includeLowerCase = true;
+// const includeUpperCase = true;
+// const includeNumbers = true;
+// const includeSymbols = true;
+
+
+
+// console.log(generateRandomPass(passwordLength, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols )
+// )
+
+
+// let arr = [,,,]
+// let arr1 = [1,2,3,4]
+// let arr2 = [[1,2,3],[4,5,6]]
+
+// console.log(arr.length)
+// console.log(arr1.length)
+// console.log(arr2.length)
+
+
+
+// let temp = arr.sort((a,b) => a - b)
+
+// let arr = [1,18,9,81,98,123]
+
+// for(let i = 0; i < arr.length - 1; i++){
+
+//     if(arr[i] > arr[i + 1]){
+
+//         [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]
+
+//     }
+// }
+
+// console.log(arr)
+
+// const data = {
+//     message: "Get all users Successfully",
+//     statusCode: 200,
+//     data: [
+//         {
+//             id: "1",
+//             name: "John Doe",
+//             role: "Admin",
+//             status: "Active",
+//             email: "john.doe@example.com"
+//         },
+//         {
+//             id: "2",
+//             name: "Jane Smith",
+//             role: "Developer",
+//             status: "Active",
+//             email: "jane.smith@example.com"
+//         },
+//         {
+//             id: "3",
+//             name: "Michael Johnson",
+//             role: "QA Engineer",
+//             status: "Inactive",
+//             email: "michael.johnson@example.com"
+//         },
+//         {
+//             id: "4",
+//             name: "Sarah Williams",
+//             role: "Project Manager",
+//             status: "Active",
+//             email: "sarah.williams@example.com"
+//         },
+//         {
+//             id: "5",
+//             name: "David Brown",
+//             role: "UI/UX Designer",
+//             status: "Pending",
+//             email: "david.brown@example.com"
+//         }
+//     ]
+// }
+
+// const active = data.data.map(user => user.name === "Sarah Williams");
+
+// console.log(active)
+
+// let arr = [1,18,9,81,98,123]
+
+// arr.splice(6,0,124)
+
+// console.log(arr)
+
+// let newarr = arr.filter((item) => item > 100 )
+
+// console.log(newarr)
+
+// let arr = [1,18,9,81,98,123]
+
+// arr.length = 0
+
+// console.log(arr)
+
+// let arr = new Array(1,2,3,4,5)
+
+// console.log(arr)
+
+// let arr1 = Array.of(1,2,3,4,5)
+// console.log(arr1)
+
+
+// let arr23 = [1,18,9,81,98,123,18,9]
+
+// let temp = []
+
+// for(let i = 0; i < arr23.length; i++){
+//     if(!temp.includes(arr23[i])){
+//         temp.push(arr23[i])
+//     }
+// }
+
+// console.log(temp)
+
+
+// let arr2 = [1,18,9,81,98,123,18,9]
+
+// let unique = [...new Set(arr2)]
+// console.log(unique)
+
+// function abc(a,b,c,d,e){
+
+// }
+
+// function pqr(a=0,b,c,d,e){
+
+// }
+
+// console.log(abc.length, pqr.length)
+
+// const pi = 3.14;
+// let pi1 = 3.14
+
+// console.log(pi)
+// console.log(pi1)
+
+
+// pi1 = 1.14
+
+// console.log(pi)
+// console.log(pi1)
+
+
+// const user = [
+//     {name: "john", age: 22}
+// ]
+// user[0].name = "didyeey"
+// console.log(user)
+
+// let string = "This is quinay dexter"
+
+// let quinay = string.slice(string.indexOf("q"), string.indexOf("y") + 1)
+// let quinayUp = quinay[0].toUpperCase() + quinay.slice(1)
+
+// let dexter = string.slice(string.indexOf("d"), string.indexOf("r") + 1)
+// let dexterUp = dexter[0].toUpperCase() + dexter.slice(1)
+
+
+
+// console.log(`${quinayUp} \n${dexterUp}`)
+
+
+// const num = [1,2,3,4,5]
+
+// num.splice(0,2,20)
+
+// console.log(num)
+
+
+// hello(hi)
+// hi(goodbye)
+// function hello(callback){
+//     console.log(`hello!`);
+//     callback()
+// }
+
+// function hi(callback){
+//     console.log(`hi`);
+//     callback()
+// }
+
+
+// function goodbye (){
+//     console.log(`goodbye`)
+// }
+
+// sum(display, 2, 3)
+
+// let numbers = [1,2,3,4,5]
+
+// sum1(average, ...numbers);
+
+// function sum1(callback, ...numbers){
+//     let sum = 0;
+//     for(let i = 0; i < numbers.length; i++){
+//         sum += numbers[i]
+//     }  
+    
+//     console.log(`1st function passing : ${numbers.length} and ${sum}`)
+
+//     callback(numbers.length, sum)
+
+    
+// }
+
+// function average(length, actualNum){
+//     let result = actualNum / length;
+//     console.log(`Callback now: ${result}`)
+// }
+
+// function sum(callback, x,y){
+//     let result = x + y;
+//     callback(result);
+// }
+
+// function display(result){
+//     console.log(result)
+// }
+
+
+
+// function processScores(callback, score1, score2, score3, score4, score5){ 
+//     let sum = score1 + score2 + score3 + score4 + score5;
+//     let average = sum / 5
+//     let arr = []
+
+//     arr.push(score1)
+//     arr.push(score2)
+//     arr.push(score3)
+//     arr.push(score4)
+//     arr.push(score5)
+
+//     console.log(arr)
+
+//     let max = Math.max(...arr)
+//     let min = Math.min(...arr)
+
+//     callback(sum, average, max, min)
+
+    
+// }
+
+// function showReport(sum, average, max, min){
+//     console.log(`Total Score: ${sum}`)
+//     console.log(`Average Score: ${average}`)
+//     console.log(`Highest Score: ${max}`)
+//     console.log(`Lowest Score: ${min}`)
+// }
+
+// processScores(showReport, 90, 85, 100, 70, 95)
+
+
+// let numbers = [1,2,3,4,5]
+
+// // for(let num of numbers){
+// //     console.log(num)
+// // }
+
+// function double(element, index, array){
+//     array[index] = element * 2;
+
+// }
+
+// function triple(element, index, array){
+//     array[index] = element * 3;
+
+// }
+
+// function square(element, index, array){
+//     array[index] = Math.pow(element, 2);
+
+// }
+
+// function cube(element, index, array){
+//     array[index] = Math.pow(element, 3);
+
+// }
+
+
+
+// function sum (element){
+//     console.log(element)
+// }
+
+// numbers.forEach(cube)
+// numbers.forEach(sum)
+
+
+
+// let fruits = ["apple", "Orange", "banana", "coconut"]
+
+// fruits.forEach(capitalize)
+
+// function display(element){
+//     console.log(element)
+// }
+
+// function UpperCase(element){
+//     console.log(element.toUpperCase())
+// }
+
+// function LowerCase(element){
+//     console.log(element.toLowerCase())
+// }
+
+// function capitalize(element){
+//     console.log(element.charAt(0).toUpperCase() + element.slice(1))
+// }
+
+// const foods = ["Pizza", "Burger", "Pasta", "Fries"];
+
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// function display(element){
+//     console.log(element)
+// }
+
+// function double(element, index, array){
+//     array[index] = element * 2
+// }
+
+// numbers.forEach(double)
+// numbers.forEach(display)
+
+
+// const fruits = ["apple", "banana", "mango", "orange"];
+
+// function Capitalizes(element, index, array){
+//     array[index] = element.charAt(0).toUpperCase() + element.slice(1)
+// }
+
+
+// fruits.forEach(Capitalizes)
+// fruits.forEach(display)
+
+// let sum = 0;
+
+// const prices = [100, 250, 75, 50];
+
+// prices.forEach((num) => {
+//     sum += num
+// })
+
+// console.log(sum)
+
+// const students = ["John", "Maria", "Alex"];
+
+
+// students.forEach((elements, index) => {
+//     for(let j = 0; j < 1; j++){
+//         console.log(`${index} - ${elements}`)
+//     }
+// })
+
+
+// const nums = [1, 2, 4, 7, 8, 10, 13];
+
+// let even = []
+
+// nums.forEach(countEven)
+
+// function countEven(element){
+// if(element % 2 == 0){
+//     even.push(element)
+// }
+// }
+
+// console.log(even)
+// console.log(`Even numbers: ${even.length}`)
+
+// const nums = [1, 2, 3, 4];
+
+// nums.forEach(square)
+// nums.forEach(display)
+// function display(element){
+//     console.log(element)
+// }
+// function square(element, index, array){
+//     array[index] = element ** 2
+// }
+// const num = [1,2,3,4,5]
+// const squared = num.map(cube)
+// console.log(squared)
+// function square(element){
+//     return Math.pow(element, 2)
+// }
+// function cube(element){
+//     return Math.pow(element, 3)
+// }
+// const fruits = ["banana", "orange", "grapes", "watermelon"]
+// const capitaled = fruits.map(toUppercase);
+// const lower = fruits.map(toLowerCase);
+// console.log(lower)
+// console.log(capitaled)
+// function toUppercase(element){
+//     return element.toUpperCase();
+// }
+// function toLowerCase(element){
+//     return element.toLowerCase();
+// }
+
+
+// const dates = ["2024-1-10", "2025-2-20", "2026-3-30"]
+// const formated = dates.map(formater);
+// console.log(formated);
+// function formater(element){
+//     const parts = element.split("-")
+//     return `${parts[1]} | ${parts[2]} | ${parts[0]}`;
+// }
+
+
+// const students = [
+//     "juan dela cruz",
+//     "maria santos",
+//     "pedro penduko",
+//     "ana marie reyes",
+//     "joseph villanueva",
+//     "charles bautista",
+//     "samantha lee",
+//     "alexa mae fernandez",
+//     "mark anthony santos",
+//     "christine joy reyes"
+// ];
+
+
+// function details(element){
+//     //full Name
+//     let fullName = element;
+//     //initial
+//     let matches = element.match(/\b(\w)/g);
+//     let initial = matches.join('').toUpperCase();
+//     //unsername
+//     let user = element.slice(element.charAt(0), element.indexOf(" "));
+//     let username = `${user}123`
+//     //length
+//     let length = element.replaceAll(" ", "").length;
+//     return {
+//         FullName: fullName,
+//         initials: initial,
+//         username: username,
+//         length: length
+//     }
+// }
+
+// const result = students.map(details);
+
+// console.log(result)
+
+
+// let num = [1,2,3,4,5,6,7,8,9]
+
+// let oddNum = num.filter(Odd)
+
+// let evenNum = num.filter(even)
+
+// console.log(oddNum)
+// console.log(evenNum)
+
+// function even(element){
+//     return element % 2 === 1;
+// }
+// function Odd(element){
+//     return element % 2 === 0;
+// }
+
+// const words = ["apple", "orange", "banana", "kiwi", "pomegranate", "coconut"]
+
+// const shortWordss = words.filter(shortWords)
+
+// console.log(shortWordss)
+
+// function shortWords(element){
+//     return element.length < 6;
+// }
+
+
+// const users = [
+//   { name: "John", active: true },
+//   { name: "Maria", active: false },
+//   { name: "Alex", active: true },
+//   { name: "Sophia", active: false }
+// ];
+
+// let active = users.filter(actives)
+
+// console.log(active)
+
+// function actives(element){
+//     return element.active == true;
+// }
+
+
+// const products = [
+//   { name: "Laptop", price: 50000 },
+//   { name: "Mouse", price: 800 },
+//   { name: "Keyboard", price: 1500 },
+//   { name: "Monitor", price: 12000 }
+// ];
+
+// let expensive = products.filter(expensiveness)
+
+// console.log(expensive)
+
+// function expensiveness(element){
+//     return element.price > 10000;
+// }
+
+
+// const words = [
+//   "javascript",
+//   "cat",
+//   "developer",
+//   "hi",
+//   "programming",
+//   "dog"
+// ];
+
+
+// let longWords = words.filter(long)
+
+// console.log(longWords)
+
+// function long(element){
+//     return element.length > 5;
+// }
