@@ -812,3 +812,14 @@ console.log(even)
 console.log(squared)
 console.log(capitalize)
 console.log(sum1)
+
+
+const person1 = {
+  firstName: "Didyeey",
+  lastName: "Quins",
+  age: 22,
+  isEmployed: true,
+  dangalGreetings: () => {console.log(`Dangal Greetings Kapatid`)}
+}
+
+person1.dangalGreetings()
