@@ -48,23 +48,23 @@ const map = users.map(user => user.username)
 console.log(map)
 
 
-// let x = 5;
+let x = 5;
 
-// function function1(){
-//   let x = 2;
-//   console.log(x)
-// }
+function function1(){
+  let x = 2;
+  console.log(x)
+}
 
-// function function2(){
-//   let y = 5;
-//   console.log(x + y)
-// }
+function function2(){
+  let y = 5;
+  console.log(x + y)
+}
 
-// function2(x)
-// const textBoxs = document.getElementById("textBox");
-// const toFahrenheit = document.getElementById("fahrenheit");
-// const toCelsius = document.getElementById("celciuis");
-// const result = document.getElementById("result");
+function2(x)
+const textBoxs = document.getElementById("textBox");
+const toFahrenheit = document.getElementById("fahrenheit");
+const toCelsius = document.getElementById("celciuis");
+const result = document.getElementById("result");
 
 
 
