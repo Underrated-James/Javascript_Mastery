@@ -87,38 +87,38 @@ function convert(event) {
 }
 
 
-// let numbers = [1,2,3,4,5]
+let numbers = [1,2,3,4,5]
 
-// let max = Math.max(...numbers)
-// let min = Math.min(...numbers)
-// console.log(`max: ${max} | min: ${min}`)
+let max = Math.max(...numbers)
+let min = Math.min(...numbers)
+console.log(`max: ${max} | min: ${min}`)
 
-// let fruits = ["apple", "orange", "banana"]
-// let veg = ['celery', 'magustine', 'carrots']
+let fruits = ["apple", "orange", "banana"]
+let veg = ['celery', 'magustine', 'carrots']
 
-// let temp = [...veg, ...fruits, 1]
-// console.log(temp)
+let temp = [...veg, ...fruits, 1]
+console.log(temp)
 
 
-// const food1 = 'pizza';
-// const food2 = 'hotdog';
-// const food3 = 'apple';
-// const food4 = 'meat';
+const food1 = 'pizza';
+const food2 = 'hotdog';
+const food3 = 'apple';
+const food4 = 'meat';
 
-// function fridge(...foods){
-//     console.log(foods)
-// }
+function fridge(...foods){
+    console.log(foods)
+}
 
-// function sum(...numbers){
-//     let result = 0;
+function sum(...numbers){
+    let result = 0;
 
-//     for(let number of numbers){
-//         result += number 
-//     }
-//     return result
-// }
+    for(let number of numbers){
+        result += number 
+    }
+    return result
+}
 
-// console.log(sum(1,2,3,4,5))
+console.log(sum(1,2,3,4,5))
 
 
 
