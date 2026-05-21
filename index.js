@@ -758,3 +758,57 @@ function getMax(previous, next){
 function getMin(previous, next){
   return Math.min(previous, next);
 }
+
+
+
+const fruits1 = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+const result2 = fruits1.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+
+console.log(result2);
+
+
+const hello = function(){
+  console.log(`Hello`)
+}
+
+hello();
+
+setTimeout(function(){
+  console.log(`hello`)
+}, 3000)
+
+
+
+const numbers1 =[1,2,3,4,5,6,7]
+
+const string = ["apple", "orange", "sunkist", "coconut"]
+
+const capitalize = string.map(function(element){
+  return element.charAt(0).toUpperCase() + element.slice(1)
+})
+
+const squared = numbers1.map(function(element){
+  return Math.pow(element, 2)
+})
+
+const even = numbers1.filter((element) => {
+  return element % 2 === 0;
+})
+
+const odd = numbers1.filter((element) => {
+  return element % 2 === 1;
+})
+
+const sum1 = numbers1.reduce((previous, next) => {
+  return previous + next;
+})
+
+console.log(odd)
+console.log(even)
+console.log(squared)
+console.log(capitalize)
+console.log(sum1)
