@@ -68,23 +68,23 @@ const result = document.getElementById("result");
 
 
 
-// function convert(event) {
-//     event.preventDefault();
+function convert(event) {
+    event.preventDefault();
 
-//     let temp = Number(textBoxs.value);
+    let temp = Number(textBoxs.value);
     
-//     if (toFahrenheit.checked) {
-//         let answer = (temp * 1.8) + 32;
-//         result.textContent = answer;    
-//     } 
-//     else if (toCelsius.checked) {
-//         let sagot = (temp - 32) / 2
-//         result.textContent = sagot
-//     } 
-//     else {
-//         result.textContent = "Please select an option";
-//     }
-// }
+    if (toFahrenheit.checked) {
+        let answer = (temp * 1.8) + 32;
+        result.textContent = answer;    
+    } 
+    else if (toCelsius.checked) {
+        let sagot = (temp - 32) / 2
+        result.textContent = sagot
+    } 
+    else {
+        result.textContent = "Please select an option";
+    }
+}
 
 
 // let numbers = [1,2,3,4,5]
