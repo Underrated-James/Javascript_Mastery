@@ -822,4 +822,17 @@ const person1 = {
   dangalGreetings: () => {console.log(`Dangal Greetings Kapatid`)}
 }
 
-person1.dangalGreetings()
+const person2 = {
+  firstName: "James",
+  lastName: "Reid",
+  age: 28,
+  isEmployed: false,
+  food: "hamburger",
+  eating: function() {
+    console.log(`Hello my name is ${this.firstName} and my favorite food is ${this.food}`)
+  }
+}
+
+person2.eating();
+
+
