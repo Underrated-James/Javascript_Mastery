@@ -836,3 +836,83 @@ const person2 = {
 person2.eating();
 
 
+const employees = [
+  {
+    firstName: "James",
+    lastName: "Reid",
+    age: 28,
+    salary: 50000,
+    active: true,
+    skills: ["JavaScript", "React", "Node.js"],
+
+    introduce() {
+      console.log(`Hi I'm ${this.firstName} ${this.lastName}`);
+    }
+  },
+
+  {
+    firstName: "Maria",
+    lastName: "Santos",
+    age: 22,
+    salary: 35000,
+    active: false,
+    skills: ["HTML", "CSS"],
+
+    introduce() {
+      console.log(`Hi I'm ${this.firstName} ${this.lastName}`);
+    }
+  },
+
+  {
+    firstName: "Alex",
+    lastName: "Cruz",
+    age: 30,
+    salary: 70000, 
+    active: true,
+    skills: ["Python", "Django", "SQL"],
+
+    introduce() {
+      console.log(`Hi I'm ${this.firstName} ${this.lastName}`);
+    }
+  }
+];
+
+
+const activeUsers = employees.filter((element) => {
+  if(element.active == true){
+    return element.introduce()
+  }
+})
+
+const competitive = employees.filter((element) => {
+  if(element.salary > 40000){
+    return element.firstName + element.lastName
+  }
+})
+
+const fullNames = employees.map((element) => {
+  return element.firstName + element.lastName
+})
+
+const totals = employees.reduce((total, employees) => {
+  return total + employees.salary;
+}, 0)
+
+const topEmployee = employees.reduce((highest, employees) => {
+  return highest.salary > employees.salary ? highest : employees
+})
+
+const python = employees.filter((element) => {
+  if(element.skills.includes("Python")){
+    return element.firstName + element.lastName;
+  }
+})
+
+
+console.log(python)
+console.log(topEmployee)
+console.log(totals)
+console.log(fullNames)
+console.log(competitive)
+console.log(activeUsers)
+
