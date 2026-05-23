@@ -916,3 +916,21 @@ console.log(fullNames)
 console.log(competitive)
 console.log(activeUsers)
 
+class User{
+  
+  static userCount = 0;
+
+  constructor(username, age, role){
+    this.username = username
+    this.age = age
+    this.role = role
+    User.userCount++;
+  }
+}
+
+const user1 = new User("Didyeey");
+const user2 = new User("Didyeeys");
+const user3 = new User("Didyeeys", 22, "admin");
+
+console.log(`${user3.username} ${user3.age} ${user3.role}`)
+console.log(`${user1.username} ${User.userCount}`)
