@@ -966,3 +966,19 @@ console.log(`${color1} ${color2} ${color3}`)
 console.log(extraColors)
 
 
+const person3 = {
+  firstName: "dexter",
+  lastName: "reid",
+  age: 22,
+};
+
+const person4 = {
+  firstName: "Madi",
+  lastName: "Diaz",
+  age: 29,
+  role: "Lead"
+};
+
+const {firstName, lastName, age, role="staff"} = person3;
+
+console.log(`${firstName} ${lastName} ${age} ${role}`)
