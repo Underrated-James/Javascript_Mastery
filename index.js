@@ -934,3 +934,35 @@ const user3 = new User("Didyeeys", 22, "admin");
 
 console.log(`${user3.username} ${user3.age} ${user3.role}`)
 console.log(`${user1.username} ${User.userCount}`)
+
+// Destructuring 
+let a = 5;
+let b =10
+
+a = a + b;
+b = a - b;
+a = a - b
+
+console.log(`${a} ${b}`)
+
+let c = 1;
+let d = 2;
+
+[c, d] = [d, c];
+
+console.log(c, d);
+
+const nums = [1,2,3,4,5,6,7,8,9];
+
+[nums[1], nums[3]] = [nums[3], nums[1]];
+
+console.log(nums)
+
+const colors = ['red', 'green', 'blue', 'violet', 'pink']
+
+const [color1, color2, color3, ...extraColors] = colors;
+
+console.log(`${color1} ${color2} ${color3}`)
+console.log(extraColors)
+
+
