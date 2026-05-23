@@ -916,6 +916,8 @@ console.log(fullNames)
 console.log(competitive)
 console.log(activeUsers)
 
+
+// ===================Start=================================
 class User{
   
   static userCount = 0;
@@ -979,6 +981,15 @@ const person4 = {
   role: "Lead"
 };
 
-const {firstName, lastName, age, role="staff"} = person3;
+// const {firstName, lastName, age, role="staff"} = person3;
 
-console.log(`${firstName} ${lastName} ${age} ${role}`)
+// console.log(`${firstName} ${lastName} ${age} ${role}`)
+
+function display({firstName, lastName, age, role="unemployed"}){
+  console.log(`name: ${firstName} ${lastName}`)
+  console.log(`age: ${age}`)
+  console.log(`role: ${role}`)
+}
+
+
+display(person4);
