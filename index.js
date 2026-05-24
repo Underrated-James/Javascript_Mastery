@@ -993,3 +993,69 @@ function display({firstName, lastName, age, role="unemployed"}){
 
 
 display(person4);
+
+
+const fruitss = [
+  {
+    name: "Apple",
+    color: "Red",
+    calories: 950
+  },
+
+  {
+    name: "Banana",
+    color: "Yellow",
+    calories: 105
+  },
+
+  {
+    name: "Orange",
+    color: "Orange",
+    calories: 62
+  },
+
+  {
+    name: "Mango",
+    color: "Yellow",
+    calories: 202
+  },
+
+  {
+    name: "Grapes",
+    color: "Purple",
+    calories: 69
+  },
+
+  {
+    name: "Watermelon",
+    color: "Green",
+    calories: 85
+  },
+
+  {
+    name: "Strawberry",
+    color: "Red",
+    calories: 4
+  },
+
+  {
+    name: "Pineapple",
+    color: "Brown",
+    calories: 452
+  }
+];
+
+
+const fruitNames = fruitss.map(fruit => fruit.name);
+const fruitColor = fruitss.map(fruit => fruit.color);
+const fruitCalories = fruitss.map(fruit => fruit.name + " " + fruit.calories)
+const highCal = fruitss.filter(fruit => fruit.calories > 100)
+
+const expensive = fruitss.reduce((max, fruit) => {
+  return fruit.calories > max.calories ? fruit : max
+})
+console.log(fruitNames)
+console.log(fruitColor)
+console.log(fruitCalories)
+console.log(highCal)
+console.log(expensive)
