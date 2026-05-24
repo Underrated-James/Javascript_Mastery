@@ -1059,3 +1059,21 @@ console.log(fruitColor)
 console.log(fruitCalories)
 console.log(highCal)
 console.log(expensive)
+
+
+const num =[20,3,15,5,16,22,40,32]
+
+const ascending = [...num].sort((a,b) => {
+  return a - b;
+})
+
+const descending = [...num].sort((a,b) => {
+  return b - a;
+})
+
+console.log(ascending)
+console.log(descending)
+
+
+const sorted = fruitss.sort()
+console.log(sorted)
