@@ -1077,3 +1077,24 @@ console.log(descending)
 
 const sorted = fruitss.sort()
 console.log(sorted)
+
+
+const idols = ["john", "Angel", "bob"]
+
+const sorted1 = [...idols].sort((a,b) => {
+  return a.toLowerCase().localeCompare(b.toLowerCase())
+})
+
+const sorted2 = [...idols].sort((a,b) => {
+  return b.toLowerCase().localeCompare(a.toLowerCase())
+})
+
+console.log(sorted1)
+console.log(sorted2)
+
+
+const sorted3 = fruitss.sort((a,b) => {
+  return a.calories - b.calories
+})
+
+console.log(sorted3)
