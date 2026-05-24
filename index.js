@@ -1093,8 +1093,67 @@ console.log(sorted1)
 console.log(sorted2)
 
 
-const sorted3 = fruitss.sort((a,b) => {
+const sorted3 = [...fruitss].sort((a,b) => {
   return a.calories - b.calories
 })
 
+const sorted4 = [...fruitss].sort((a,b) => {
+  return a.name - b.name
+})
+
 console.log(sorted3)
+console.log(sorted4)
+
+const posts = [
+  {
+    title: "Frontend Developer Roadmap",
+    createdAt: "2026-05-22"
+  },
+
+  {
+    title: "Building a Todo App",
+    createdAt: "2026-05-15"
+  },
+
+  {
+    title: "Learning JavaScript Basics",
+    createdAt: "2026-05-01"
+  },
+
+  {
+    title: "Working with APIs",
+    createdAt: "2026-05-20"
+  },
+
+  {
+    title: "Introduction to React",
+    createdAt: "2026-05-12"
+  },
+
+  {
+    title: "Understanding Async Await",
+    createdAt: "2026-05-18"
+  },
+
+  {
+    title: "Mastering Objects in JS",
+    createdAt: "2026-05-10"
+  },
+
+  {
+    title: "Understanding Array Methods",
+    createdAt: "2026-05-05"
+  }
+];
+
+
+const newest = [...posts].sort((a,b) => {
+  return new Date(a.createdAt) - new Date(b.createdAt)
+})
+
+const oldest = [...posts].sort((a,b) => {
+  return new Date(b.createdAt) - new Date(a.createdAt)
+})
+
+console.log(newest)
+console.log(oldest)
