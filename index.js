@@ -1249,7 +1249,14 @@ function walkDog(){
   
   return new Promise((resolve, reject) => {
       setTimeout(() => {
-    resolve(`Walk the dog 🐕`)
+
+        const walkedDog = true;
+
+        if(walkedDog){
+          resolve(`Walk the dog 🐕`)
+        }else {
+          reject(`fail Walk the dog 🐕`)
+        }
   }, 1500)
   })
 }
@@ -1258,7 +1265,13 @@ function takeOutTrash(){
 
   return new Promise((resolve, reject) => {
     setTimeout(() => {
+      const taskDone = false;
+
+      if(taskDone){
     resolve(`taking our the trash 🐕`)
+      }else{
+        reject(`didn't taking our the trash 🐕`)
+      }
   }, 2500)
   })
 }
@@ -1267,7 +1280,13 @@ function cleanKitchen(){
   
   return new Promise((resolve, reject) => {
  setTimeout(() => {
-    resolve(`cleaning the Kitchen 🐕`)
+    const taskDone = true; 
+
+    if(taskDone){
+      resolve(`cleaning the Kitchen 🐕`)
+    }else{
+      reject(`didn't cleaning the Kitchen 🐕`)
+    }
 
   }, 3500)
   })
@@ -1276,3 +1295,4 @@ function cleanKitchen(){
 const chores = walkDog().then(value => {console.log(value); return takeOutTrash()})
          .then(value => {console.log(value); return cleanKitchen()})
          .then(value => {console.log(value); console.log(`All house chores completed`)})
+         .catch(error => {console.log(error)})
