@@ -730,8 +730,6 @@ console.log(sum(1,2,3,4,5))
 // }
 
 
-
-
 const prices = [5,30,10,25,15,20]
 
 const total = prices.reduce(sum);
@@ -1157,3 +1155,115 @@ const oldest = [...posts].sort((a,b) => {
 
 console.log(newest)
 console.log(oldest)
+
+
+let string1 = "the javascript by didyeey"
+
+let words = string1.split(" ")
+console.log(words)
+let answer = words.map(word => {
+  return word.charAt(0).toUpperCase() + word.slice(1)
+})
+
+console.log(answer.join("\n"))
+
+let the = string1.charAt(0).toUpperCase() + string1.slice(1,3)
+let js = string1.charAt(4).toUpperCase() + string1.slice(5,15)
+let by = string1.charAt(15).toUpperCase() + string1.slice(16,18)
+let didyeey = string1.charAt(18).toUpperCase() + string1.slice(19)
+
+console.log(`${the} \n ${js} \n ${by} \n ${didyeey}`)
+
+
+console.log(typeof Nan)
+console.log(NaN===NaN)
+console.log(NaN===NaN)
+
+let y = 2;
+
+console.log(++y)
+console.log(y)
+
+
+console.log([]==![])
+
+
+function fn (){
+  return {
+    name: "didyeey"
+  }
+}
+
+console.log(fn())
+
+console.log(typeof null)
+
+
+const mun = [1,2,3,4,5,6,7,8]
+
+const totals2 = mun.reduce((accumulator, element) => {
+  return accumulator += element
+})
+
+
+console.log(totals2)
+
+
+
+const names2 = "hello love good bye"
+
+const formateds2 = names2.split(' ')
+
+
+const results = formateds2.map((element => 
+   element.charAt(0).toUpperCase() + element.slice(1)
+)).join(" ")
+
+console.log(formateds2)
+console.log(results)
+
+
+// const time = setTimeout(() => {
+//   console.log(`Hello`)
+// }, 3000)
+
+
+let timeOutID;
+
+function startTimer() {
+  timeOutID = setTimeout(() => {
+    window.alert("LAloves")
+    console.log(`Started`)
+  }, 3000)
+}
+
+function timeOut(){
+  clearTimeout(timeOutID)
+  console.log(`cleared`)
+}
+
+
+//Promises 
+
+function walkDog(){
+  
+  setTimeout(() => {
+    console.log(`Walk the dog 🐕`)
+  }, 1500)
+}
+
+function takeOutTrash(){
+  
+  setTimeout(() => {
+    console.log(`taking our the trash 🐕`)
+  }, 1500)
+}
+
+function cleanKitchen(){
+  
+  setTimeout(() => {
+    console.log(`cleaning the Kitchen 🐕`)
+  }, 1500)
+}
+
+
