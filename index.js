@@ -1300,15 +1300,14 @@ function cleanKitchen(){
 
 async function doChores() {
   
-  const task1 = await walkDog()
+  const task1 = await Promise.all([
+    walkDog(),
+    takeOutTrash(),
+    cleanKitchen()
+  ]);
+
   console.log(task1)
 
-  const task2 = await takeOutTrash()
-  console.log(task2)
-
-  const task3 = await cleanKitchen()
-  console.log(task3)
-  
 }
 
 doChores()
