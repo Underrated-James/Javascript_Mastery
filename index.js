@@ -1247,23 +1247,32 @@ function timeOut(){
 
 function walkDog(){
   
-  setTimeout(() => {
-    console.log(`Walk the dog 🐕`)
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+    resolve(`Walk the dog 🐕`)
   }, 1500)
+  })
 }
 
 function takeOutTrash(){
-  
-  setTimeout(() => {
-    console.log(`taking our the trash 🐕`)
-  }, 1500)
+
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+    resolve(`taking our the trash 🐕`)
+  }, 2500)
+  })
 }
 
 function cleanKitchen(){
   
-  setTimeout(() => {
-    console.log(`cleaning the Kitchen 🐕`)
-  }, 1500)
+  return new Promise((resolve, reject) => {
+ setTimeout(() => {
+    resolve(`cleaning the Kitchen 🐕`)
+
+  }, 3500)
+  })
 }
 
-
+const chores = walkDog().then(value => {console.log(value); return takeOutTrash()})
+         .then(value => {console.log(value); return cleanKitchen()})
+         .then(value => {console.log(value); console.log(`All house chores completed`)})
