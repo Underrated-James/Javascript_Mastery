@@ -1298,7 +1298,7 @@ async function doChores() {
     walkDog(),
     takeOutTrash(),
     cleanKitchen()
-    
+
   ]);
 
   console.log(task1)
@@ -1306,5 +1306,20 @@ async function doChores() {
 }
 
 doChores()
+
+
+//API 
+
+const responses = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+                  .then(response => response.json())
+                  .then(values => {
+                    const total = values.stats.reduce((acc, element) => {
+                      return acc + element.base_stat
+                    }, 0)
+
+                    console.log(total)
+                  })
+                  .catch(error => console.log(error))
+
 
 
