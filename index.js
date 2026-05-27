@@ -1311,7 +1311,13 @@ doChores()
 //API 
 
 const responses = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-                  .then(response => response.json())
+                  .then(response => {
+                    if(!response.ok){
+                      throw new Error("Could not fetch resources")
+                    }
+
+                    return response.json()
+                  })
                   .then(values => {
                     const total = values.stats.reduce((acc, element) => {
                       return acc + element.base_stat
@@ -1323,3 +1329,10 @@ const responses = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
 
 
 
+// const muns = [1,2,3,4,5]
+
+// const totals23 = muns.reduce((acc, element) => {
+//   return acc += element
+// })
+
+// console.log(totals23)
