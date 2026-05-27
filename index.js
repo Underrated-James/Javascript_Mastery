@@ -1292,7 +1292,21 @@ function cleanKitchen(){
   })
 }
 
-const chores = walkDog().then(value => {console.log(value); return takeOutTrash()})
-         .then(value => {console.log(value); return cleanKitchen()})
-         .then(value => {console.log(value); console.log(`All house chores completed`)})
-         .catch(error => {console.log(error)})
+const chores = walkDog()
+  .then(value => {
+      console.log(value);
+      return takeOutTrash()
+        .catch(error => {
+            console.log(error);
+        });
+  })
+  .then(value => {
+      return cleanKitchen();
+  })
+  .then(value => {
+      console.log(value);
+      console.log("All chores completed");
+  })
+  .catch(error => {
+      console.log("FINAL ERROR:", error);
+  });
