@@ -1265,7 +1265,7 @@ function takeOutTrash(){
 
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const taskDone = false;
+      const taskDone = true;
 
       if(taskDone){
     resolve(`taking our the trash 🐕`)
@@ -1292,21 +1292,25 @@ function cleanKitchen(){
   })
 }
 
-const chores = walkDog()
-  .then(value => {
-      console.log(value);
-      return takeOutTrash()
-        .catch(error => {
-            console.log(error);
-        });
-  })
-  .then(value => {
-      return cleanKitchen();
-  })
-  .then(value => {
-      console.log(value);
-      console.log("All chores completed");
-  })
-  .catch(error => {
-      console.log("FINAL ERROR:", error);
-  });
+// const chores = walkDog().then(value => {console.log(value); return takeOutTrash()})
+//          .then(value => {console.log(value); return cleanKitchen()})
+//          .then(value => {console.log(value); console.log(`All house chores completed`)})
+//          .catch(error => {console.log(error)})
+
+
+async function doChores() {
+  
+  const task1 = await walkDog()
+  console.log(task1)
+
+  const task2 = await takeOutTrash()
+  console.log(task2)
+
+  const task3 = await cleanKitchen()
+  console.log(task3)
+  
+}
+
+doChores()
+
+
