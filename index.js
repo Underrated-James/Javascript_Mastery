@@ -1248,7 +1248,6 @@ function timeOut(){
 function walkDog(){
   
   return new Promise((resolve, reject) => {
-      setTimeout(() => {
 
         const walkedDog = true;
 
@@ -1257,14 +1256,13 @@ function walkDog(){
         }else {
           reject(`fail Walk the dog 🐕`)
         }
-  }, 1500)
   })
 }
 
 function takeOutTrash(){
 
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
+
       const taskDone = true;
 
       if(taskDone){
@@ -1272,14 +1270,12 @@ function takeOutTrash(){
       }else{
         reject(`didn't taking our the trash 🐕`)
       }
-  }, 2500)
   })
 }
 
 function cleanKitchen(){
   
   return new Promise((resolve, reject) => {
- setTimeout(() => {
     const taskDone = true; 
 
     if(taskDone){
@@ -1287,8 +1283,6 @@ function cleanKitchen(){
     }else{
       reject(`didn't cleaning the Kitchen 🐕`)
     }
-
-  }, 3500)
   })
 }
 
@@ -1304,6 +1298,7 @@ async function doChores() {
     walkDog(),
     takeOutTrash(),
     cleanKitchen()
+    
   ]);
 
   console.log(task1)
