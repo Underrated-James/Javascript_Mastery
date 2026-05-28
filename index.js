@@ -1381,3 +1381,42 @@ console.log(abc.key)
 
 console.log(test2);
 var test2 = 100;
+
+const array1 = [15, 20, 35, 60, 30]
+const targetSum = 125;
+const targetSum1 = 90;
+
+
+function findTwoSum(arr, target){
+  for(let i = 0; i < array1.length - 1; i++){
+    for(let j = i + 1; j < array1.length; j ++){
+      if(arr[i] + arr[j] === target){
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+  return null;
+}
+
+const result1 = findTwoSum(array1, targetSum1);
+console.log(result1)
+
+function findThreeSum(arr, target) {
+  for (let i = 0; i < arr.length - 2; i++) {
+    for (let j = i + 1; j < arr.length - 1; j++) {
+      for (let k = j + 1; k < arr.length; k++) {
+        
+        // Check if the sum of the three distinct elements equals the target
+        if (arr[i] + arr[j] + arr[k] === target) {
+          return [arr[i], arr[j], arr[k]]; // Return the numbers as an array
+        }
+        
+      }
+    }
+  }
+  return null; // Return null if no combination is found
+}
+
+const result3 = findThreeSum(array1, targetSum);
+console.log(result3); 
+// Output: [35, 60, 30]
