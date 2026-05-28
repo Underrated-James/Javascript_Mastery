@@ -1310,24 +1310,33 @@ doChores()
 
 //API 
 
-const responses = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-                  .then(response => {
-                    if(!response.ok){
-                      throw new Error("Could not fetch resources")
-                    }
+// const responses = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+//                   .then(response => {
+//                     if(!response.ok){
+//                       throw new Error("Could not fetch resources")
+//                     }
 
-                    return response.json()
-                  })
-                  .then(values => {
-                    const total = values.stats.reduce((acc, element) => {
-                      return acc + element.base_stat
-                    }, 0)
+//                     return response.json()
+//                   })
+//                   .then(values => {
+//                     const total = values.stats.reduce((acc, element) => {
+//                       return acc + element.base_stat
+//                     }, 0)
 
-                    console.log(total)
-                  })
-                  .catch(error => console.log(error))
+//                     console.log(total)
+//                   })
+//                   .catch(error => console.log(error))
+
+console.log(0.1 + 0.2 === 0.3)
 
 
+const obj = {
+  a:1, 
+  b:2
+}
+
+const stri = JSON.stringify(obj)
+console.log(stri)
 
 // const muns = [1,2,3,4,5]
 
@@ -1336,3 +1345,31 @@ const responses = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
 // })
 
 // console.log(totals23)
+
+
+
+
+const data1 = fetch("https://pokeapi.co/api/v2/pokemon/blastoise")
+              .then(response => response.json())
+              .then(values => {
+                console.log(values)
+                const min = Math.min(...values.stats.map((element) => {
+                 return element.base_stat
+                }));
+                console.log(min)
+              })
+              .catch(error => console.log(error));
+
+
+const dups = [1,2,3,4,1,3,5,6,7]
+
+const count = dups.reduce((acc, element) => {
+  const effort = element
+
+  acc[effort] = (acc[effort] || 0) + 1
+
+  return acc;
+
+}, {})
+
+console.log(count)
