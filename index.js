@@ -1377,3 +1377,7 @@ const abc2 = {...abc}
 abc2.key = "test1"
 
 console.log(abc.key)
+
+
+console.log(test2);
+var test2 = 100;
