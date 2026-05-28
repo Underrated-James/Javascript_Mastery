@@ -1368,3 +1368,12 @@ const dumps = dups.reduce((acc, element) => {
   return acc;
 }, {})
 console.log(dumps)
+
+
+const abc = {};
+abc.key = "test";
+const abc2 = {...abc}
+
+abc2.key = "test1"
+
+console.log(abc.key)
