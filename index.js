@@ -1363,13 +1363,8 @@ const data1 = fetch("https://pokeapi.co/api/v2/pokemon/blastoise")
 
 const dups = [1,2,3,4,1,3,5,6,7]
 
-const count = dups.reduce((acc, element) => {
-  const effort = element
-
-  acc[effort] = (acc[effort] || 0) + 1
-
+const dumps = dups.reduce((acc, element) => {
+  acc[element] = (acc[element] || 0) + 1
   return acc;
-
 }, {})
-
-console.log(count)
+console.log(dumps)
