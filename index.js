@@ -1420,3 +1420,27 @@ function findThreeSum(arr, target) {
 const result3 = findThreeSum(array1, targetSum);
 console.log(result3); 
 // Output: [35, 60, 30]
+
+
+const array = [1,2,3,4,5,6]
+array.length = 0
+console.log(array)
+const produce = array.unshift()
+
+
+console.log(produce)
+
+
+const obj1 = {
+  name: "test1",
+  age: 21
+}
+
+const obj2 = {
+  name: "test2",
+  age: 23
+}
+
+const obj3 = {...obj1, ...obj2};
+
+console.log(obj3)
